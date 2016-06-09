@@ -11,7 +11,7 @@ import MapKit
 
 class ViewController: UIViewController {
 
-    var Spotlist = [Spot] ()
+    var SpotList = [Spot] ()
     
     @IBOutlet var MapView: MKMapView!
     
@@ -23,53 +23,31 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        //self.SpotList = Spot.spotList()
+        
+        setupMapView()
+    //    setupTableView()
     }
     
-    //self.spotList = Spot.spotList()
     
-    //setupMapView()
-    //setupTableView()
+    
+    
+
+
+    func setupMapView() {
+       self.MapView.mapType = .Hybrid
+        self.MapView.showsBuildings = true
+//        self.MapView.addAnnotations(self.spotList: as!)
+    }
+
+//    func setupTableView() {
+//            self.dataSource = self
+//            self.tableViewdelegate = self
+//        
+//    }
     
 }
-
-        //func setupMapView() {
-           // self.mapView.mapType = Hybrid
-            //self.mapView.showBuidlings = true
-            //self.mapView.addAnnotations(self.spotList: as!)
-            
-            //func setupTableView() {
-                //self.dataSource = self
-                //self.tableViewdelegate = self
-                
     
-
-
-    //override func didReceiveMemoryWarning() {
-        //super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-      
-        //func TableView : UITableView (tableView:UITableView, numberofRowsInSection section:Int) ->Int {
-           // return self.spotList.count
-            
-        
-            
-           // func TableView (tableView:UITableView, cellforRowIndexPath indexPath:NSIndexPath)
-             //   UITableViewCell {
-                   // let spot = spotList(indexPath.row]
-                   // let cell = tableView.
-                
-            
-        
-        //func tableView(tableView:UITableView, didSelectRowAtIndexPath indexPath:NSIndexPath) {
-           // let spot = spotList(indexPath.row)
-            //tableView.deselectRowAtIndexPath(indexPath,animated:true)
-        
-            
-        
-        
-    
-
-
 
 
 

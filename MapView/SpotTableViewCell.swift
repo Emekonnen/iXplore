@@ -9,7 +9,18 @@
 import UIKit
 
 class SpotTableViewCell: UITableViewCell {
-
+    
+    @IBOutlet var ImageViewCell: UIImageView!
+    
+    @IBAction func star4(sender: UIButton) {
+    }
+    @IBAction func star3(sender: UIButton) {
+    }
+    @IBAction func star2(sender: UIButton) {
+    }
+    
+    @IBAction func star1(sender: UIButton) {
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,5 +31,6 @@ class SpotTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
     
 }
