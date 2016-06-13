@@ -18,19 +18,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="hybrid" translatesAutoresizingMaskIntoConstraints="NO" id="lpX-5C-GIV">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="hybrid" translatesAutoresizingMaskIntoConstraints="NO" id="lpX-5C-GIV">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="321"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="281" id="AmS-px-NWU"/>
+                                    <constraint firstAttribute="width" constant="580" id="Mzy-r8-xi2"/>
+                                </constraints>
                             </mapView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ys8-gs-0gB">
-                                <rect key="frame" x="0.0" y="319" width="580" height="281"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ys8-gs-0gB">
+                                <rect key="frame" x="0.0" y="319" width="622" height="281"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="580" id="X3I-My-Uwn"/>
+                                    <constraint firstAttribute="height" constant="281" id="jMs-UG-ep2"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="ZEr-Wq-WLx">
+                                        <rect key="frame" x="0.0" y="28" width="622" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZEr-Wq-WLx" id="ie2-Cg-mGg">
+                                            <rect key="frame" x="0.0" y="0.0" width="622" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="lpX-5C-GIV" firstAttribute="leading" secondItem="Ys8-gs-0gB" secondAttribute="leading" id="5wt-uX-den"/>
                             <constraint firstItem="lpX-5C-GIV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="EE7-ET-Dss"/>
                             <constraint firstItem="lpX-5C-GIV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-11" id="Rcc-N0-eEX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lpX-5C-GIV" secondAttribute="trailing" constant="-20" id="edS-Eg-xtv"/>
+                            <constraint firstItem="lpX-5C-GIV" firstAttribute="trailing" secondItem="Ys8-gs-0gB" secondAttribute="trailing" id="ov0-ir-2II"/>
+                            <constraint firstItem="lpX-5C-GIV" firstAttribute="centerX" secondItem="Ys8-gs-0gB" secondAttribute="centerX" id="yN6-hN-1dI"/>
                         </constraints>
                     </view>
                     <connections>

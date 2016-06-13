@@ -9,45 +9,52 @@
 import UIKit
 import MapKit
 
-class ViewController: UIViewController {
-
-    var SpotList = [Spot] ()
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+   // var SpotList = Spot
+    let textCellIdentifier = "TextCell"
     
     @IBOutlet var MapView: MKMapView!
     
     @IBOutlet var TableView: UITableView!
-
     
-    @IBOutlet var TableViewCell: [UIView]!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        //self.SpotList = Spot.spotList()
-        
-        setupMapView()
-    //    setupTableView()
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
     }
     
-    
-    
-    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("SpotTableViewCell", forIndexPath: indexPath)
+        return cell
+    }
+        override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+    //self.SpotList = Spot.SpotList ()
+        
+       // TableView.delegate = self
+      //  TableView.dataSource = self
+        
+        setupMapView()
+    }
 
 
     func setupMapView() {
        self.MapView.mapType = .Hybrid
-        self.MapView.showsBuildings = true
+       self.MapView.showsBuildings = true
 //        self.MapView.addAnnotations(self.spotList: as!)
     }
+    
+    
+    //func setupTableView() {
+      //  self.TableView.delegate = self
+      //  self.TableView.dataSource = self
+        //        self.MapView.addAnnotations(self.spotList: as!)
+    }
+    
 
-//    func setupTableView() {
-//            self.dataSource = self
-//            self.tableViewdelegate = self
-//        
-//    }
-    
-}
-    
+    //func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        //    }
+
 
 
 
