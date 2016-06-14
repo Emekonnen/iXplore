@@ -16,7 +16,7 @@ class Spot:NSObject, MKAnnotation  {
     var logoURL:String?
     var ratable:Bool = true
     
-    class func spotList(count:Int) -> [Spot] {
+    class func spotList() -> [Spot] {
     
     let spot = Spot ()
     spot.title = "Workshop 17"
@@ -44,29 +44,19 @@ class Spot:NSObject, MKAnnotation  {
     spot.title = "Workshop 17"
     spot.coordinate = CLLocationCoordinate2D(latitude: -33.906764,longitude: 18.4164983)
     return spot
+        
     }
-    
-}
-
-//let mapCenterCoordinateAfterMove = CLLocationCoordinate2D(latitude: self.spotList[indexPath.row].coordinate.latitude,longitude: self.spotList[indexPath.row].coordinate.longitude)
-//        let adjustedRegion = mapView.regionThatFits(MKCoordinateRegionMake(mapCenterCoordinateAfterMove,
-//MKCoordinateSpanMake(0.01, 0.01)))
-//        mapView.setRegion(adjustedRegion, animated: true)
-
-extension UIImageView   {
-    
-    
     public func imageFromUrl(urlString: String) {
-    if let url = NSURL(string: urlString) {
-    let request = NSURLRequest(URL: url)
-    NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) {
-    (response: NSURLResponse?, data: NSData?, error: NSError?) -> Void in
-    if let imageData = data as NSData? {
-    self.image = UIImage(data: imageData)
-    }
-       }
-     }
-}
+        if let url = NSURL(string: urlString) {
+        let request = NSURLRequest(URL: url)
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) {
+        (response: NSURLResponse?, data: NSData?, error: NSError?) -> Void in
+                if let imageData = data as NSData? {
     
-}
+    
+    }
 
+            }
+        }
+}
+}

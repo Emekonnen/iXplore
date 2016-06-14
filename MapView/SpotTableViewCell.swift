@@ -10,6 +10,25 @@ import UIKit
 
 class SpotTableViewCell: UITableViewCell {
     
+    
+    @IBOutlet weak var label: UILabel!
+    
+    @IBOutlet weak var imageViewCell: UIImageView!
+    
+    @IBOutlet weak var star1: UIButton!
+    
+    @IBOutlet weak var star2: UIButton!
+    
+    @IBOutlet weak var star3: UIButton!
+    
+    @IBOutlet weak var star4: UIButton!
+    
+    @IBOutlet weak var star5: UIButton!
+    
+    
+    @IBAction func ButtonTapped(sender: UIButton) {
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -17,7 +36,6 @@ class SpotTableViewCell: UITableViewCell {
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
     

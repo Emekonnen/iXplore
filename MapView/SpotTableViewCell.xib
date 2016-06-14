@@ -23,6 +23,16 @@
                     </label>
                 </subviews>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="imageViewCell" destination="YtV-rI-bao" id="85b-54-Ked"/>
+                <outlet property="imageviewcell" destination="YtV-rI-bao" id="Ncv-TD-ENw"/>
+                <outlet property="label" destination="VBm-ta-qME" id="B8a-ng-SPK"/>
+                <outlet property="star1" destination="im7-Iv-gHa" id="DLf-Jc-hbb"/>
+                <outlet property="star2" destination="bOg-sF-1IQ" id="2Z0-kn-p5j"/>
+                <outlet property="star3" destination="NgZ-6B-F0w" id="cJQ-6P-Z4V"/>
+                <outlet property="star4" destination="NUI-E1-Knt" id="2cv-lL-JlC"/>
+                <outlet property="star5" destination="hPv-yx-4DF" id="woo-Nr-0Qr"/>
+            </connections>
             <point key="canvasLocation" x="625.5" y="145.5"/>
         </tableViewCell>
         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="llA-d8-DEI">
@@ -31,5 +41,81 @@
             <state key="normal" title="Button"/>
             <point key="canvasLocation" x="509" y="490"/>
         </button>
+        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1I6-pI-xEU">
+            <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <state key="normal" title="Button"/>
+            <point key="canvasLocation" x="575" y="314"/>
+        </button>
+        <barButtonItem title="Item" id="ENa-cc-qGG"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="104" id="U8G-9J-hd2">
+            <rect key="frame" x="0.0" y="0.0" width="463" height="104"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="U8G-9J-hd2" id="i2H-BM-NRf">
+                <rect key="frame" x="0.0" y="0.0" width="463" height="103"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YtV-rI-bao">
+                        <rect key="frame" x="0.0" y="0.0" width="82" height="103"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VBm-ta-qME">
+                        <rect key="frame" x="90" y="8" width="356" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="im7-Iv-gHa">
+                        <rect key="frame" x="64" y="28" width="127" height="75"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="129" id="xvT-sC-hze"/>
+                        </constraints>
+                        <state key="normal" image="star_black"/>
+                        <connections>
+                            <action selector="ButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="nSX-LL-Fn9"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bOg-sF-1IQ">
+                        <rect key="frame" x="138" y="28" width="129" height="75"/>
+                        <state key="normal" image="star_black"/>
+                        <connections>
+                            <action selector="ButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Mib-ZJ-DiB"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NgZ-6B-F0w">
+                        <rect key="frame" x="212" y="28" width="129" height="75"/>
+                        <state key="normal" image="star_black"/>
+                        <connections>
+                            <action selector="ButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="9ok-JU-kxI"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NUI-E1-Knt">
+                        <rect key="frame" x="291" y="28" width="129" height="75"/>
+                        <state key="normal" image="star_black"/>
+                        <connections>
+                            <action selector="ButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="0cn-FL-yCb"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hPv-yx-4DF">
+                        <rect key="frame" x="378" y="28" width="100" height="75"/>
+                        <state key="normal" image="star_black"/>
+                        <connections>
+                            <action selector="ButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="FBV-YD-oxp"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="603.5" y="145"/>
+        </tableViewCell>
+        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Lyp-ke-Dgx">
+            <rect key="frame" x="0.0" y="0.0" width="42" height="4"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+            <nil key="highlightedColor"/>
+            <point key="canvasLocation" x="547" y="383"/>
+        </label>
     </objects>
+    <resources>
+        <image name="star_black" width="75" height="75"/>
+    </resources>
 </document>
